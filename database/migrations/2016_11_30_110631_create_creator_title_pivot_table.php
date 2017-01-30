@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItemTitlePivotTable extends Migration
+class CreateCreatorTitlePivotTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateItemTitlePivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('item_title', function (Blueprint $table) {
-            $table->integer('item_id')->unsigned()->index();
-            $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
+        Schema::create('creator_title', function (Blueprint $table) {
+            $table->integer('creator_id')->unsigned()->index();
+            $table->foreign('creator_id')->references('id')->on('creators')->onDelete('cascade');
             $table->integer('title_id')->unsigned()->index();
             $table->foreign('title_id')->references('id')->on('titles')->onDelete('cascade');
-            $table->primary(['item_id', 'title_id']);
+            $table->primary(['creator_id', 'title_id']);
         });
     }
 
@@ -28,6 +28,6 @@ class CreateItemTitlePivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('item_title');
+        Schema::drop('creator_title');
     }
 }

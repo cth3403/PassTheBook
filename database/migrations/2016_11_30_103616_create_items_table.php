@@ -15,6 +15,8 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('title_id')->unsigned()->index();
+            $table->foreign('title_id')->references('id')->on('titles')->onDelete('cascade');
             $table->string('condition');
             $table->decimal('price',6,2);
             $table->text('comments');
@@ -24,6 +26,7 @@ class CreateItemsTable extends Migration
             $table->string('location')->nullable();
             $table->string('collect')->nullable()->default(null);
             $table->string('ref');
+            $table->integer('special')->default(0);
             $table->date('cleared_at')->nullable()->default(null);
             $table->softDeletes();
             $table->timestamps();

@@ -16,6 +16,8 @@ class CreateIsbnsTable extends Migration
         Schema::create('isbns', function (Blueprint $table) {
             $table->increments('id');
             $table->string('isbn');
+            $table->integer('title_id')->unsigned()->index();
+            $table->foreign('title_id')->references('id')->on('titles')->onDelete('cascade');
             $table->string('type')->default('isbn');
             $table->softDeletes();
             $table->timestamps();

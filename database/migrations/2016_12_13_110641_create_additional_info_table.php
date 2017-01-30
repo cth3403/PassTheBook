@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIsbnTitlePivotTable extends Migration
+class CreateAdditionalInfoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +13,15 @@ class CreateIsbnTitlePivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('isbn_title', function (Blueprint $table) {
-            $table->integer('isbn_id')->unsigned()->index();
-            $table->foreign('isbn_id')->references('id')->on('isbns')->onDelete('cascade');
+        Schema::create('additional_info', function (Blueprint $table) {
+            $table->increments('id');
+            // edition info for books
+            $table->string('field1')->nullable();
+            // volume info for books
+            $table->string('field2')->nullable();
             $table->integer('title_id')->unsigned()->index();
             $table->foreign('title_id')->references('id')->on('titles')->onDelete('cascade');
-            $table->primary(['isbn_id', 'title_id']);
+            $table->timestamps();
         });
     }
 
@@ -28,6 +32,6 @@ class CreateIsbnTitlePivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('isbn_title');
+        Schema::dropIfExists('additional_info');
     }
 }

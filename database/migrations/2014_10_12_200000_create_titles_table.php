@@ -17,8 +17,6 @@ class CreateTitlesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('subtitle')->nullable();
-            $table->string('edition')->nullable();
-            $table->string('volume')->nullable();
             $table->date('pubdate')->nullable();
             $table->string('type')->default('title');
             $table->softDeletes();
