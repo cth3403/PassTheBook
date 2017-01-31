@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<zs:searchRetrieveResponse xmlns:zs="http://www.loc.gov/zing/srw/"><zs:version>1.1</zs:version><zs:numberOfRecords>1</zs:numberOfRecords><zs:records><zs:record><zs:recordSchema>mods</zs:recordSchema><zs:recordPacking>xml</zs:recordPacking><zs:recordData><mods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <titleInfo>
+    <title>PHP advanced and object-oriented programming</title>
+  </titleInfo>
+  <name type="personal" usage="primary">
+    <namePart>Ullman, Larry E. (Larry Edward)</namePart>
+    <namePart type="date">1972-</namePart>
+    <role>
+      <roleTerm type="text">author.</roleTerm>
+    </role>
+  </name>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="rdacontent">text</genre>
+  <originInfo>
+    <place>
+      <placeTerm type="code" authority="marccountry">cau</placeTerm>
+    </place>
+    <dateIssued encoding="marc">2012</dateIssued>
+    <edition>Third edition.</edition>
+    <issuance>monographic</issuance>
+  </originInfo>
+  <originInfo eventType="publication">
+    <place>
+      <placeTerm type="text">Berkeley, CA :</placeTerm>
+    </place>
+    <publisher>Peachpit Press,</publisher>
+    <dateIssued>c2013.</dateIssued>
+  </originInfo>
+  <language>
+    <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+  </language>
+  <physicalDescription>
+    <form authority="marcform">print</form>
+    <extent>xii, 491 pages : illustrations ; 23 cm</extent>
+    <form type="media" authority="rdamedia">unmediated</form>
+    <form type="carrier" authority="rdacarrier">volume</form>
+  </physicalDescription>
+  <note type="statement of responsibility" altRepGroup="00">Larry Ullman.</note>
+  <note>Includes index.</note>
+  <note>"Includes eBook"--Cover.</note>
+  <subject authority="lcsh">
+    <topic>PHP (Computer program language)</topic>
+  </subject>
+  <subject authority="lcsh">
+    <topic>Object-oriented programming (Computer science)</topic>
+  </subject>
+  <classification authority="lcc">QA76.73.P224 U45 2013</classification>
+  <relatedItem type="series">
+    <titleInfo>
+      <title>Visual quickpro guide</title>
+    </titleInfo>
+  </relatedItem>
+  <identifier type="isbn">9780321832184 (pbk.)</identifier>
+  <identifier type="isbn">0321832183 (pbk.)</identifier>
+  <identifier type="lccn">2012275120</identifier>
+  <recordInfo>
+    <descriptionStandard>rda</descriptionStandard>
+    <recordContentSource authority="marcorg">DLC</recordContentSource>
+    <recordCreationDate encoding="marc">130114</recordCreationDate>
+    <recordChangeDate encoding="iso8601">20161118165339.0</recordChangeDate>
+    <recordIdentifier>17590112</recordIdentifier>
+    <recordOrigin>Converted from MARCXML to MODS version 3.5 using MARC21slim2MODS3-5.xsl
+				(Revision 1.106 2014/12/19)</recordOrigin>
+    <languageOfCataloging>
+      <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+    </languageOfCataloging>
+  </recordInfo>
+</mods></zs:recordData><zs:recordPosition>1</zs:recordPosition></zs:record></zs:records><zs:echoedSearchRetrieveRequest><zs:version>1.1</zs:version><zs:query>bath.isbn=0321832183</zs:query><zs:maximumRecords>1</zs:maximumRecords><zs:recordPacking>xml</zs:recordPacking><zs:recordSchema>mods</zs:recordSchema></zs:echoedSearchRetrieveRequest></zs:searchRetrieveResponse>

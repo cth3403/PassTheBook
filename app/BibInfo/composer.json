@@ -1,0 +1,22 @@
+{
+    "name": "cth3403/bibinfo",
+    "description": "Extracts bibliographic metadata from library catalogues",
+    "keywords": [
+        "bibliographic",
+        "metadata"
+    ],
+    "homepage": "https://github.com/cth3403",
+    "license": "MIT",
+    "require":{
+        "fale/isbn": "^3.0",
+        "scriptotek/sru-client": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "BibInfo\\": "src"
+        }
+    }
+}
